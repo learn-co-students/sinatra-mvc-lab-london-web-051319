@@ -8,9 +8,9 @@ class PigLatinizer
     end
 
     def pig_latinize_word(word)
-        if word =~ (/\A[aeiou]/i)
+        if word[0] =~ (/[aeiou]/i)
             word = word + 'way'
-        elsif word[0] != (/\A[^aeiou]/i)
+        elsif word[0] != (/[aeiou]/i)
             parts = word.split(/([aeiou].*)/)
             first_part = parts[0]
             second_part = parts[1]
